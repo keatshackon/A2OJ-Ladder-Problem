@@ -9,50 +9,25 @@ int main(){
 	string s;
 	cin>>s;
 
-	bool h = false;
-	bool e = false;
-	bool l1 = false;
-	bool l = false;
-	bool o = false;
-
-	int f = 1;
-	i = 0;
-	while(i < s.length()){
-		if(s[i] == 'h'){
-			break;
-		}
-		i++;
-	}
-	int cnt = 0;
+	string res = "";
 	
-	for(;i < s.length();i++){
-		
-		if(s[i] == 'e'){
-			if(h == true){
-				e = true; 
-			}else{
-				cout<<"NO";
-				f=0;
-				break;
-			}
-		}else if(s[i] == 'l'){
-			if(e == true){
-				l = true; 
-				cnt++;
-			}
-		}else if(s[i] == 'o'){
-			if(e == true){
-				l = true; 
-			}else{
-				cout<<"NO";
-				f=0;
-				break;
-			}
+	for(int i=0;i<s.length();i++){
+		if(s[i] == 'h' and res.length() == 0){
+			res+='h';
+		}else if(s[i] == 'e' and res.length() == 1){
+			res+='e';
+		}else if(s[i] == 'l' and res.length() == 2){
+			res+='l';
+		}else if(s[i] == 'l' and res.length() == 3){
+			res+='l';
+		}else if(s[i] == 'o' and res.length() == 4){
+			res+='o';
 		}
 	}
-	if(f == 1 and cnt < 2){
+
+	if(res == "hello"){
 		cout<<"YES";
 	}else{
-		cout<<"No";
+		cout<<"NO";
 	}
 }

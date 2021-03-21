@@ -1,0 +1,12 @@
+
+						DIV-2-A
+===========================================================
+
+1>> https://codeforces.com/problemset/problem/136/A
+
+2>> http://codeforces.com/problemset/problem/451/A
+
+
+3>> http://codeforces.com/problemset/problem/479/A(wrong codeforce TestCase)!
+
+4>> http://codeforces.com/problemset/problem/469/A

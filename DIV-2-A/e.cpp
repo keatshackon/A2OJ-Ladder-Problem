@@ -1,110 +1,69 @@
 #include<bits/stdc++.h>
 using namespace std;
+#define ll long long
+vector<int> graph[(int)1e5 + 100];
+vector<int> visit((int)1e5 + 100, 0);
 
+// void dfs(int position) {
+// 	if (visit[position] == 1) {
+// 		return;
+// 	}
+// 	cout << position << " ";
+// 	visit[position] = 1;
 
-bool  prime(int a){
+// 	for (int i = 0; i < g[position].size(); i++) {
+// 		dfs(g[position][i]);
+// 	}
 
-	if(a == 0){
-		return false;
+// }
+
+int main() {
+
+	int v = 0;
+	int n, q;
+
+	cin >> n;
+
+	for (int i = 0; i < n; i++) {
+
+		int x, y; cin >> x >> y;
+		graph[x].push_back(y);
+		graph[y].push_back(x);
+
 	}
 
-	int i = 2;
-	for(int i = 2;i * i <= a;i++){
-		if(a % i == 0){
-			return false;
+	for (int i = 0; i < n; i++) {
+		for (auto q : graph[i]) {
+			cout << q << " ";
 		}
+		cout << "\n";
 	}
 
-	return true;
+	return 0;
+
 }
 
 
-bool fact(int a,int b){
-	
-	int c = 0;
-	int d = 0;
+// int n;
+// vector<vector<int>> adj;
+// vector<bool> visited;
+// vector<int> ans;
 
-	if(a % 2 == 0  and b % 2 == 0 and a != b){
-		if(b > a){
-			return true;
-		}else{
-			return false;
-		}
-		
-	}
-
-	if(prime(a)){
-		for(int i = 0;i*i <= b;i++ ){
-			if(a % i == 0){
-				c = i;
-			}
-		}
-	}else{
-		c = a;
-	}
-	
-	if(prime(b)){
-		for(int i = 2;i*i <= b;i++ ){
-			if(b % i == 0){
-				c = i;
-			}
-		}
-	}else{
-		d = b;
-	}
-
-	if(d>c){
-		return true;
-	}else{
-		return false;
-	}
-	for(int i = 2;i * i <= b;i++ ){
-		if(b % i == 0){
-			d = i;
-		}
-	}
-}
-
-int main()
-{
-	vector<int> v = {2,3,4,5,6,7,8,8};
-	sort(v.begin(), v.end(),fact);
-	for(auto q:v){
-		cout<<q<<" ";
-	}
-    return 0;
-}
-
-
-
-
-
-// struct comp{
-// bool operator()(string s1,string s2){
-
-// 	int a=0;
-// 	int b=0;
-
-// 	for(auto q:s1){
-// 		if(q == 'a'){
-// 			a++;
-// 		}
+// void dfs(int v) {
+// 	visited[v] = true;
+// 	for (int u : adj[v]) {
+// 		if (!visited[u])
+// 			dfs(u);
 // 	}
+// 	ans.push_back(v);
+// }
 
-// 	for(auto q:s2){
-// 		if(q == 'a'){
-// 			b++;
-// 		}
+// void topological_sort() {
+// 	visited.resize(n, false);
+// 	ans.clear();
+// 	for (int i = 0; i < n; ++i) {
+// 		if (!visited[i])
+// 			dfs(i);
 // 	}
-// 	if(b > a){
-// 		return true;
-// 	}else if(a == b){
-// 		if(s1 < s2){
-// 			return true;
-// 		}
-// 	}
-// 	return false;
-
-
-// 	}
-// };
+// 	reverse(ans.begin(), ans.end());
+// }

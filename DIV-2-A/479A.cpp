@@ -3,23 +3,35 @@ using namespace std;
 #define ll long long
 
 
-int main(){
+int main() {
 
-	ll a,b,c;
-	cin>>a>>b>>c;
+	ll a, b, c;
+	cin >> a >> b >> c;
 
-	int l = max(max(a,b),c);
-	int k = min(min(a,b),c);
-	int j = (a+b+c)- (l+k);
 
-	if(k == 1){
-		if(l == 1 and j == 1){
-			cout<<(l+k+j);
-		}else{
-			cout<<(j+k)*l;	
+	if (a == 1 and  b == 1 and c == 1) {
+		cout << a + b + c;
+
+	} else if (a == 1) {
+		if (c == 1) {
+			cout << (a + b) + c;
+		} else {
+			cout << (a + b)*c;
 		}
-		
-	}else{
-		cout<<l*k*j;
+	} else if (b == 1) {
+		if (((a + b )* c) >= ((c + b) * a)) {
+			cout << (a + b)*c;
+		} else {
+			cout << (c + b) * a;
+		}
+	} else if (c == 1) {
+		if (((c + b )* a) >= (a + b)*c) {
+			cout << (c + b)*a;
+		} else {
+			cout << (a + b)*c;
+		}
+	} else {
+		cout << a*b*c;
 	}
+	return 0;
 }

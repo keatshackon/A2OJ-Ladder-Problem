@@ -5,31 +5,25 @@ using namespace std;
 
 int main() {
 
+	// =============== INCOMPLETE ===============
 
-	// <======================INCOMPLETE=====================>
-	ll t, n, m, j, k, l;
-	cin >> n >> m >> l >> k;
+	ll n, m, a, b;
+	cin >> n >> m >> a >> b;
+	int total = 0;
 
+	if (m >= b) {
 
-	int a = ((n / m) + 1) * k;
-	if (a >= l * n ) {
-		cout << l*n;
-	} else {
-		int b = n / m * k;
-		n  = n - n / m ;
-
-		if (n == 0  ) {
-			if ((l * k > b)) {
-				cout << b;
-			} else {
-				cout << (l * k);
-			}
-		} else {
-			int a =
+		int cnt = n / m;
+		total = cnt * b;
+		if (n % m != 0) {
+			total += (n % m) * a;
 		}
+		cout << total;
 
-
+	} else {
+		cout << (n * a);
 	}
 
+	return 0;
 
 }

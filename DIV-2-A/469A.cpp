@@ -2,8 +2,6 @@
 using namespace std;
 #define ll long long
 
-
-
 int main() {
 
 	ll t, q, n, k;

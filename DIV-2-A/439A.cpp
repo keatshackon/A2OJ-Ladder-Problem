@@ -17,8 +17,6 @@ int main() {
 
 	sum += ((v.size() - 1) * 10);
 
-	// cout << sum << "\n";
-
 	if (d >= sum) {
 
 		int res = ((v.size() - 1) * 10) / 5 +  (d - sum) / 5;

@@ -2,7 +2,6 @@
 using namespace std;
 #define ll long long
 
-
 int main() {
 
 	ll a, b;
@@ -11,8 +10,6 @@ int main() {
 	int aWin = 0;
 	int bWin = 0;
 	int draw = 0;
-
-
 
 	if (abs(a - 1) < abs(b - 1)) {
 		aWin++;

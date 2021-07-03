@@ -4,7 +4,6 @@ using namespace std;
 
 int main() {
 
-
 	ll t, n;
 	cin >> n;
 	char q;
@@ -36,14 +35,6 @@ int main() {
 		}
 		x--;
 	}
-
-	// for (auto q : s1) {
-	// 	cout << q << " ";
-	// }
-
-	// for (auto q : s2) {
-	// 	cout << q << " ";
-	// }
 
 	if (s1.size() != 1 ) {
 		cout << "NO";

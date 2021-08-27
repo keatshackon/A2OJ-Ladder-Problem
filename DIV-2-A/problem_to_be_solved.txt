@@ -14,3 +14,5 @@
 5>> https://codeforces.com/problemset/problem/462/A
 
 6>> https://codeforces.com/problemset/problem/496/A
+
+7>> https://codeforces.com/problemset/problem/189/A

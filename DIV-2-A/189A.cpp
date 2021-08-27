@@ -12,14 +12,17 @@ int main() {
 	v.push_back(c);
 	v.push_back(d);
 
-	sort(v.begin(), v.end(), greater<int>());
+	sort(v.begin(), v.end());
 
-	for (auto q : v) {
-
+	if ((v[0] + v[1] + v[2]) == a) {
+		cout << 3;
+	} else if ((v[0] + v[1]) == a) {
+		cout << 2;
+	} else if ((v[0]) == a) {
+		cout << 1;
+	} else {
+		cout << a;
 	}
 
-
-
-
-
+	return 0;
 }

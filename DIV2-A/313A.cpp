@@ -14,7 +14,6 @@ int main() {
 		char a  = s[s.length() - 1];
 		char b  = s[s.length() - 2];
 
-
 		if (a - '0' >= b - '0') {
 			cout << t / 10;
 		} else {
@@ -26,9 +25,7 @@ int main() {
 
 			int temp = stoi(res);
 			cout << (-1 * temp);
-
 		}
 	}
 	return 0;
-
 }

@@ -1,31 +1,34 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 #define ll long long
 
+
 int main() {
 
-	ll n;
-	cin >> n;
-
-	if (n >= 10) {
-		cout << n;
+	ll t;
+	cin >> t;
+	if (t >= 10) {
+		cout << t;
 	} else {
-		int t = abs(n);
-		string ss = to_string(t);
-		int s1 = ss[ss.length() - 1] - '0';
-		int s2 = ss[ss.length() - 2] - '0';
+		string s = to_string(abs(t));
+		char a  = s[s.length() - 1];
+		char b  = s[s.length() - 2];
 
-		if (s1 > s2) {
-			string temp(ss.begin(), ss.begin() + ss.length() - 1);
-			cout << "-" << temp;
+
+		if (a - '0' >= b - '0') {
+			cout << t / 10;
 		} else {
-			string temp(ss.begin(), ss.begin() + ss.length() - 2);
+			string res = "";
+			for (int i = 0; i < s.length() - 2; i++) {
+				res += s[i];
+			}
+			res += a;
 
-			char kkk = ss[ss.length() - 1];
-			if (kkk == '0') cout << 0;
-			else cout << "-" << ss.erase(ss.length() - 2) + kkk;
+			int temp = stoi(res);
+			cout << (-1 * temp);
 
 		}
 	}
 	return 0;
+
 }

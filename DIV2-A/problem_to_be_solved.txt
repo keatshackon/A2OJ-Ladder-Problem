@@ -5,3 +5,7 @@
 1>> https://codeforces.com/problemset/problem/136/A
 
 2>> https://codeforces.com/problemset/problem/459/A
+
+3>> https://codeforces.com/problemset/problem/439/A
+
+4>> https://codeforces.com/problemset/problem/462/A

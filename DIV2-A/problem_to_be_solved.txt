@@ -9,4 +9,8 @@
 
 
 =====================================coder_ravan==========
-3>> https://codeforces.com/problemset/problem/462/A
+1>> https://codeforces.com/problemset/problem/462/A
+
+2>> https://codeforces.com/contest/224/problem/A
+
+3>> https://codeforces.com/contest/272/problem/A
